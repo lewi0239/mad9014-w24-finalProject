@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <title>SPA: Face Detect</title>
+  </head>
+  <body>
+    <header>
+      <!-- Header -->
+      <h1>Detect Faces</h1>
+      <p class="how-to">
+        To use this app, search for any images with the Run Search button, save
+        your favorite images within the Saved Images Page. The Face Detection
+        tool will try to detect faces!
+      </p>
+      <nav>
+        <button id="searchPage">Home</button>
+        <button id="savedPage">Saved Images</button>
+      </nav>
+    </header>
+    <main>
+      <section id="imageResults"></section>
+      <div class="container">
+        <div class="searchForm">
+          <form method="dialog">
+            <div id="savedImages" style="display: none"></div>
+            <p>
+              <label for="keyword">Search for Images</label>
+              <input
+                type="text"
+                id="keyword"
+                name="keyword"
+                placeholder="Little Pony..."
+              />
+            </p>
+            <p>
+              <button id="btnRunSearch">Run Search</button>
+            </p>
+          </form>
+        </div>
+        <div id="results" class="results"></div>
+      </div>
+      <dialog id="imageDialog" class="image-dialog">
+        <div class="image-wrapper">
+          <img id="dialogImage" src="" alt="Full-sized image" />
+        </div>
+        <!-- Face Detection -->
+        <div class="dialog-controls">
+          <button id="saveImage">Save Image</button>
+          <button id="removeImage">Remove Image</button>
+          <button id="cancelImage">Cancel Action</button>
+        </div>
+      </dialog>
+    </main>
+    <script src="./app/app.js" type="module"></script>
+  </body>
+</html>
